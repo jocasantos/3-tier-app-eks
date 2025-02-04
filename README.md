@@ -26,3 +26,5 @@ aws iam list-open-id-connect-providers | grep $oidc_id | cut -d "/" -f4
 ```
 eksctl utils associate-iam-oidc-provider --cluster $cluster_name --approve
 ```
+
+### Deploy ALB 
