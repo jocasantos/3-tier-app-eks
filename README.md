@@ -7,12 +7,12 @@
 
 ### Create a EKS cluster
 ```
-eksctl create cluster --name demo-cluster-three-tier-1 --region us-east-1
+eksctl create cluster --name demo-cluster-three-tier-1 --region eu-north-1
 ```
 
 ### Configure IAM OIDC provider 
 ```
-export cluster_name=<CLUSTER-NAME>
+export cluster_name=demo-cluster-three-tier-1
 ```
 ```
 oidc_id=$(aws eks describe-cluster --name $cluster_name --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5) 

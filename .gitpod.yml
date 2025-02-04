@@ -1,0 +1,18 @@
+tasks:
+  - name: Install utilities
+    before: |
+      sudo apt-get update -y && sudo apt-get install -y tree
+
+  - name: Setup AWS CLI
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+      CLUSTER_NAME: demo-cluster-three-tier-1
+    before: |
+      echo "🔄 Making setup.sh executable..."
+      chmod +x setup.sh
+    init: |
+      echo "🚀 Running setup.sh..."
+      ./setup.sh
+
+
+
