@@ -4,6 +4,7 @@
 - AWS CLI
 - kubectl
 - eksctl
+- Helm
 
 ### Clone this project
 ```
