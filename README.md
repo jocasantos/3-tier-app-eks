@@ -5,6 +5,11 @@
 - kubectl
 - eksctl
 
+### Clone this project
+```
+git clone https://github.com/jocasantos/3-tier-app-eks.git
+```
+
 ### Create a EKS cluster
 ```
 eksctl create cluster --name demo-cluster-three-tier-1 --region eu-north-1
@@ -119,3 +124,8 @@ kubectl get ingress -n robot-shop
 ```
 
 > Congratuations! :tada:
+
+- Delete cluster and all components
+```
+eksctl delete cluster --name demo-cluster-three-tier-1 --region eu-north-1
+```
